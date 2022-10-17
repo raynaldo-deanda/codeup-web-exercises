@@ -1,0 +1,7 @@
+Steps to pushing
+
+1. git status(not needed but I can check what isn't add and commited)
+2. git add .(add files to staging/history)(alternative git add <filename>)
+3. git commit -m "your label for this commit"
+4. git push origin <branchname> (to find what branch you are on, do 'git branch')(will push local commits to github)
+5. git status(should say "Your branch is up to date with 'origin/branchname'"git remi)
