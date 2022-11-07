@@ -2,3 +2,49 @@
     color: purple;
     text-decoration: underline;
 }
+
+#h1.fancy-header {
+    text-align: center;
+}
+
+.h1 {
+    color:black;
+    text-underline: purple;
+}
+
+body, html {
+    background-color: whitesmoke;
+    color: white;
+}
+
+ol { list-style: upper-alpha; }
+
+body,html {
+    font-style: italic;
+    font-family: "Robotica", sans-serif;
+    background-image: url("../images/pexels-markus-spiske-1089438.jpg");
+}
+
+table {
+    font-size: 25px;
+    padding: 20px
+}
+
+a:link {
+    color:darkcyan;
+}
+
+a:hover {
+    color:silver
+}
+
+a:visited {
+    color: crimson;
+}
+
+a:active{
+    color:orange;
+}
+
+
+

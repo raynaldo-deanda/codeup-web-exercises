@@ -1,7 +1,7 @@
 (function(){
     "use strict";
 
-    var planets = [
+    const planets = [
         'Mercury',
         'Venus',
         'Earth',

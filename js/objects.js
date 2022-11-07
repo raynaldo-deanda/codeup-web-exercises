@@ -47,37 +47,36 @@ let person = {
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
-     var shoppers = [
-         {name: 'Cameron', amount: 180},
-         {name: 'Ryan', amount: 250},
-         {name: 'George', amount: 320}
-     ];
-     shoppers.forEach(function(shopper){
+    const shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    shoppers.forEach(function(shopper){
          let discountAmount = shopper.amount - (shopper.amount * 0.12).toFixed(2);
          let discountTotal = shopper.amount - discountAmount;
-         if (shopper.amount>200{
-             console.log(`Hi ${shopper.name}, your previous total was $${shopper.amount}, 
-             but you have a discount of $${discountAmount.toFixed(2)} 
+         if (shopper.amount>200)_{
+             console.log(`Hi ${shopper.name} , your previous total was $ ${shopper.amount}, 
+             but you have a discount of $ ${discountAmount.toFixed(2)} 
              to bring you a grand total of ${discountTotal}');
-         }else{
-         console.log(`Hi ${shopper.name}, your total is $${shopper.amount}`);
-     })
+         else {
+         console.log(`Hi ${shopper.name} , your total is $${shopper.amount}`);)}
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
-     * variable named `books`. Each object should have a title and an author
+     * variable named books. Each object should have a title and an author
      * property. The author property should be an object with properties
-     * `firstName` and `lastName`. Be creative and add at least 5 books to the
+     * firstName and lastName. Be creative and add at least 5 books to the
      * array
      *
      * Example:
      * > console.log(books[0].title) // "The Salmon of Doubt"
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
-     */
+     /*
      
-    let books[
+    let books = [
     {
     title: "Naruto",
     author:{ 
@@ -139,22 +138,22 @@ console.log(books[2].author.firstNameName)
      *      ---
      *      ...
      */
+  //
      
-    for(let i=0; i<books.length; i++){
-        console.log(`Book # $${i + 1};
-             console.log(`Title: ${books[i].title}`);
-             console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-             console.log("---")
+ for (let i = 0; i < books.length; i++) {
+        console.log(`Book: ${books.indexOf(books[i]) + 1} \n Title: ${books[i].title} \n Author: ${books[i].author.firstName} ${books[i].author.lastName}`)
+
+    }
          }
     /**
      * Bonus:
-     * - Create a function named `createBook` that accepts a title and author
+     * - Create a function named createBook that accepts a title and author
      *   name and returns a book object with the properties described
      *   previously. Refactor your code that creates the books array to instead
      *   use your function.
-     * - Create a function named `showBookInfo` that accepts a book object and
+     * - Create a function named showBookInfo that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
-     *   `showBookInfo` function.
+     *   showBookInfo function.
      */
 
     function createBook(bookTitle, author){
@@ -175,12 +174,12 @@ console.log(books[2].author.firstNameName)
          function showBookInfo(book){
              console.log(`Book # ${books.indexOf(book) +1}`);
              console.log(`Title: ${book.title}`);
-             console.log(`Author: ${book.author.firstName} ${book.autho.lastName}');
+             console.log(`Author: ${book.author.firstName} ${book.author.lastName}');
      }
      
      for (let i = 0; i < books.length; i++){
-     showBookInfo(books[i]
-     }
+     showBookInfo(books[i])
+     })();
      
      //showBookInfo(books[1])
          //console.log(books[1])
