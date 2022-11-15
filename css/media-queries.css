@@ -1,0 +1,62 @@
+
+
+
+/*This is "Skip to main content"*/
+.alert-info{
+    background-color: rgb(203,255,254);
+    border: rgb(224,225,224) solid 3px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    height: 50px;
+
+
+}
+
+
+/*This is the Company*/
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.alert-info a{
+    text-decoration: none;
+    color: black;
+}
+
+/*This is "Home,About, work, contact."*/
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: 1rem;
+
+}
+
+ul li {
+    background-color: gray;
+    background-color: rgb(224,225,224);
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+li {
+
+
+
+}

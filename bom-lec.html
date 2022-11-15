@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width-device-width", user-scalable=no
+</head>
+<body>
+
+<script>
+  let count = 0;
+  let max =10;
+  let interval = 1000;
+
+  /*setInterval(function (){
+    console.log("Hello");
+  }, 5000);
+  */
+
+  let intervalId = setInterval(function () {
+    if (count >= max) {
+      clearInterval(intervalId);
+      console.log('All done');
+        location.reload(); // reload page, possibly from cache
+    } else {
+      count++;
+      console.log('Repeating this line ' + count);
+    }
+  }, interval);
+
+  /* class example of setTimeout()
+  'use strict';
+
+var delay = 5000; // delay time in milliseconds
+
+var timeoutId = setTimeout(function () {
+    alert('Here is a delayed hello!');
+}, delay);
+
+// to cancel the timeout, you can call
+// clearTimeout(timeoutId);
+// prior to the delay expiring
+   */
+
+</script>
+</body>
+</html>

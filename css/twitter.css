@@ -1,3 +1,87 @@
+/*Step 1*/
+
+.nav-item{
+    display: inline-block;
+    padding: 1.5em;
+
+}
+/*profile styling*/
+.profile-image{
+    position: absolute;
+    top: 250px;
+
+}
+
+.profile-form{
+    float: right;
+    line-height: 80px;
+
+}
+.profile-details{
+    float:left;
+    /*width: 25%;*/
+    margin:0 .5em;
+    width: calc(25% - 1em);
+    /*There is 1em each side so 1 em*/
+}
+
+
+.timeline {
+    float: left;
+    /*width: 50%;*/
+    margin:0 .5em;
+    width: calc(50% - 1em);
+    /*There is 1em each side so 1 em*/
+}
+
+.who-to-follow {
+    float: right;
+    /*width: 25%;*/
+    margin:0 .5em;
+    width: calc(25% - 1em);
+    /*There is 1em each side so 1 em*/
+}
+
+
+
+
+.container{
+    margin-top: 2em;
+}
+
+.media{
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: 0.5em;
+    overflow: auto;
+
+}
+
+.media-image{
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: left;
+
+
+}
+.media-body {
+    float: left;
+    width: calc(100%- 50px);
+
+    /* insert calc()*/
+}
+.profile-items {
+    list-style: none;
+    padding: 0px;
+}
+.profile-entry{
+    margin: 0.5em;
+
+}
+
+
+
 :root {
     --main-bg: #E6ECF0;
     --link-color: #3B94D9;
@@ -7,13 +91,17 @@
 }
 * {
     box-sizing: border-box;
+
 }
+
+
 body, html {
     background-color: var(--main-bg);
     height: 100%;
+    height: 100%;
     width: 100%;
     margin: 0;
-    padding: 1.5em;
+    padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
 header {
@@ -29,34 +117,30 @@ a {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
-    padding: 1.5em;
+    z-index: 1;
 }
 .nav {
     list-style-type: none;
-    padding: 1.5em;
+    padding: 0;
     margin: 0;
-    position: fixed;
-    width: 100%;
 }
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
-    padding: 1.5em;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: row;
-    flex-basis: auto;
-    flex-wrap: nowrap;
+
+
+
+
 
 }
 .nav-link:hover {
     color: var(--link-color);
-    padding: 1.5em;
 }
 .profile {
     background: var(--light-bg);
     height: 80px;
+
 }
 .btn {
     border: 1px solid var(--main-link-color);
