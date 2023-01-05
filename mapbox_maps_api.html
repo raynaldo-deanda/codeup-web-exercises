@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 50%;
+            height: 700px;
+        }
+        .images{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src="js/keys.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!-- Mapbox Geocoder Util Methods -->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!-- Custom JS -->
+<script>
+    // mapboxgl.accessToken = Codeup_Mapbox;
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v9',
+    //     zoom: 10,
+    //     center: [-96.802944, 32.777995]
+    // });
+    //
+    // var marker = new mapboxgl.Marker()
+    // .setLngLat([-96.802944, 32.777995]) // same as the starting point
+    // .addTo(map);
+    //
+    // var popup = new mapboxgl.Popup()
+    // .setLngLat([-96.802944, 32.777995]) //same as starting point
+    // .setHTML("<h1> Dallas Founder's Square</h1><br><p>Codeup Rocks!</p>")
+    // //.addTo(map)
+    //
+    // //var alamoPopup = new mapboxgl.Popup()
+    //     //.setHTML("<p>Remember The Alamo!</p>")
+    //
+    // marker.setPopup(popup)
+    //
+    // geocode("900 Jackson St #400, Dallas, Texas 75202", Codeup_Mapbox).then(function(result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(15);
+    // });
+    //
+    // // reverse geocode method from mapbox-geocoder-utils.js
+    // reverseGeocode({lng:-96.802944, lat:32.777995}, Codeup_Mapbox).then(function(results) {
+    //     // logs the address for The Dallas Founder's Square
+    //     console.log(results);
+    // });
+
+    var accessToken = Codeup_Mapbox;
+
+    mapboxgl.accessToken = accessToken;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-96.802944, 32.777995]
+    });
+
+    var favRestaurantInfo = {
+        address: "5007 W Lovers Ln, Dallas, TX 75209",
+        popupHTML: "<h1>Drake's</h1><br><p>Drake's is a swanky, old Hollywood-inspired restaurant with sophisticated cocktails at a large, circular bar.</p> <img class='images' src='images/drakes.jpeg'>",
+    };
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-96.802944, 32.777995])
+        .addTo(map);
+
+    var restaurantPopup = new mapboxgl.Popup()
+        .setHTML("")
+
+
+    function placeMarkerAndPopup(info, token, map) {
+        geocode(info.address, token).then(function(coordinates) {
+            var popup = new mapboxgl.Popup()
+                .setHTML(info.popupHTML);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map)
+                .setPopup(popup);
+            popup.addTo(map);
+        });
+
+    }
+
+
+    placeMarkerAndPopup(favRestaurantInfo, accessToken, map);
+
+</script>
+</body>
+</html>

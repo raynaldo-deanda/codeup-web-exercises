@@ -16,18 +16,20 @@
   $(document).keyup(function(event){
 
     console.log(event.keyCode);
-    userCode.push(event.keyCode)
+    userCode.push(event.keyCode)      //store key codes from user
     userCode.splice(-secretCode.length -1, userCode.length - secretCode.length)
     console.log(userCode)
 
     if(userCode.join('').includes(secretCode.join(''))) {
       alert('You have added 30 lives')
-      $('body').css('background-image', 'src(../images/PepperyAchingBasenji-mobile.mp4)' )
+      $('body').css ('background-image', 'url(../images/PepperyAchingBasenji-mobile.mp4)' )
     }
   });
+
+
+
 </script>
 </body>
 </html>
 
 
-//use < iframe > to get video to fire on successful code input

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="icon" href="images/icons8-nothern-lights-48.png">
+    <title>5-Day Forecast</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet'/>
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Mapbox CSS -->
+    <script src="https://kit.fontawesome.com/c1f274691e.js" crossorigin="anonymous"></script>
+    <link href="css/weather_map.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<!--Background Video-->
+<video autoplay muted loop id="myVideo">
+    <source src="images/Forecast%20-%205518.mp4" type="video/mp4">
+</video>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong ">
+    <div class="container-fluid ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <a class="navbar-brand logo" href="#"><img class='logo' src="images/icons8-nothern-lights-48.png"></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between">
+                <li class="nav-item">
+                    <a class="navbar-brand list-color flicker" href="#">Weather App</a>
+                </li>
+                <li class="nav-item">
+                    <p class="list-color">Current Location: <span id="city-name"></span></p>
+                </li>
+            </ul>
+            <input class="city-search " type="text" placeholder="Enter Location" id="search" aria-label="Search">
+            <button class="btn btn-outline-success submit-btn" id="btn" type="submit">Search</button>
+        </div>
+    </div>
+</nav>
+<header class="viewport-header">
+    <h1>
+        Weather
+        <span class="forecast d-lg-inline-flex">Forecast</span>
+    </h1>
+
+</header>
+
+<!--Main-->
+<main>
+    <!--Weather Cards-->
+    <div id="weather" class="container-fluid d-flex justify-content-evenly ms-2 mb-3 row"></div>
+
+    <!--MAP-->
+    <div class="map ">
+        <div id="map" alt="map"></div>
+    </div>
+    <pre id="coordinates" class="coordinates"></pre>
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="row ">
+            <div class="col-lg d-flex justify-content-center align-items-center">
+                <ul>
+                    <li><h5>ABOUT US</h5></li>
+                    <li><a href="#"><label>About Us</label></a></li>
+                    <li><a href="#"><label>Our Team</label></a></li>
+                    <li><a href="#"><label>Blog</label></a></li>
+                    <li><a href="#"><label>Careers</label></a></li>
+                </ul>
+            </div>
+            <div class="col-lg d-flex justify-content-center align-items-center m-0">
+                <ul>
+                    <li><a>
+                        <h5 class="m-0">CONTACT US</h5>
+                    </a></li>
+                    <li><a href="tel:+9999562348"> <i class="fa-solid fa-phone"></i></a>123-456-7890</li>
+                    <li><a href="mailto:xyz@abc.com"><i class="fa-regular fa-envelope"></i></a> sales@abc.com</li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i>
+                    </a>
+                        <address class="m-0">
+                            304 Gator Way, <br>
+                            Gville, Texas 12345
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg d-flex justify-content-center align-items-center p-0 m-0">
+                <ul>
+                    <li><a>
+                        <h5>SOCIAL MEDIA</h5>
+                    </a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a> Instagram</li>
+                    <li><a href="#"><i class="fa-solid fa-cloud"></i></a> Weather Friends Club</li>
+                </ul>
+            </div>
+            <p>© 2022 XYZ Weather Corp</p>
+        </div>
+    </footer>
+</main>
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/weather-api.js"></script>
+
+
+</body>
+</html>
+
